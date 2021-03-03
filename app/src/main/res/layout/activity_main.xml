@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mmv"
+            type="com.joker.fake.location.ui.activities.main.view_model.MainActivityViewModel"
+            />
+
+        <variable
+            name="main"
+            type="com.joker.fake.location.ui.activities.main.MainActivity"
+            />
+
+        <variable
+            name="toolBar"
+            type="com.joker.fake.location.bean.ToolBar"
+            />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/item_toolbar"
+            app:toolBar="@{toolBar}"
+            app:barClick="@{main}"
+            app:cjsBa="@{main}"
+            />
+
+    </LinearLayout>
+</layout>

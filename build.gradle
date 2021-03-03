@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = '1.4.0'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        //友盟统计
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        //BaseRecyclerViewAdapterHelper
+        maven { url "https://jitpack.io" }
+        //Bmob的maven仓库地址--必填
+        //   maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+        maven { url 'https://dl.bintray.com/chaozhouzhang/maven' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url"https://raw.githubusercontent.com/HyphenateInc/Hyphenate-SDK-Android/master/repository" }
+        maven { url'https://maven.aliyun.com/repository/public/' }
+        maven { url'https://maven.aliyun.com/repository/google/' }
+        maven { url'https://maven.aliyun.com/repository/jcenter/' }
+        maven { url'https://maven.aliyun.com/repository/central/' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        //友盟统计
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        //BaseRecyclerViewAdapterHelper
+        maven { url "https://jitpack.io" }
+        //Bmob的maven仓库地址--必填
+        //   maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+        maven { url 'https://dl.bintray.com/chaozhouzhang/maven' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url"https://raw.githubusercontent.com/HyphenateInc/Hyphenate-SDK-Android/master/repository" }
+        maven { url'https://maven.aliyun.com/repository/public/' }
+        maven { url'https://maven.aliyun.com/repository/google/' }
+        maven { url'https://maven.aliyun.com/repository/jcenter/' }
+        maven { url'https://maven.aliyun.com/repository/central/' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
